@@ -7,11 +7,9 @@ var argv = require('yargs')
 var git = require('./modules/git.js')
 var release = require('./modules/release.js');
 
-console.log('1 - tag')
 // 1. git tag and push
-// git.tag(argv.version)
+git.tag(argv.version)
 
-console.log('2 - publish')
 // 2. upload the release to s3
 var promise = release.publish(argv.version);
 
