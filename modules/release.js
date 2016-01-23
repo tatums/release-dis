@@ -1,3 +1,18 @@
+var glob      = require('glob');
+var fs        = require('fs');
+var AWS       = require('aws-sdk');
+var Mustache  = require('mustache');
+var template  = fs.readFileSync('template.html','utf8');
+var async     = require('async');
+var mime      = require('mime');
+
+AWS.config.update({
+  accessKeyId: process.env.AWS_KEYID,
+  secretAccessKey: process.env.AWS_SECRET,
+  region: 'us-east-1'
+});
+
+var s3 = new AWS.S3();
 exports.getBucketListing = function () {
   var params = {
     Bucket: 'comment-card-launcher',

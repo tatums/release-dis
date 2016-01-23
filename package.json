@@ -1,8 +1,12 @@
 {
   "name": "release-dis",
   "version": "1.0.0",
-  "description": "",
-  "main": "release-dis.js",
+  "description": "A tool for tagging a release. Publishing to S3. Setup an index page.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tatums/release-dis.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +17,10 @@
     "aws-sdk": "^2.2.32",
     "glob": "^6.0.4",
     "mime": "^1.3.4",
-    "mustache": "^2.2.1"
+    "mustache": "^2.2.1",
+    "yargs": "^3.32.0"
+  },
+  "bin": {
+    "release": "index.js"
   }
 }
