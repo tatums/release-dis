@@ -1,0 +1,18 @@
+{
+  "name": "release-dis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "release-dis.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "aws-sdk": "^2.2.32",
+    "glob": "^6.0.4",
+    "mime": "^1.3.4",
+    "mustache": "^2.2.1"
+  }
+}
