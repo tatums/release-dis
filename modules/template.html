@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Comment Card Launcher</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      {{#releases}}
+        <div class="panel panel-default">
+          <div class="panel-heading"> <h2>{{version}}</h2> </div>
+          <div class="panel-body">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>File</th>
+                    <th>Last Modified</th>
+                  </tr>
+                </thead>
+                <tbody>
+              {{#files}}
+                <tr>
+                  <td> <a href="{{Key}}">{{Key}}</a> </td>
+                  <td>{{LastModified}} </td>
+                </tr>
+              {{/files}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      {{/releases}}
+    </div>
+  </body>
+</html>
