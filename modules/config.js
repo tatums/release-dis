@@ -1,6 +1,6 @@
 var nconf = require('nconf');
 var glob      = require('glob');
-var configFile = glob.sync('**/*/release.config.js', {nodir: true})[0]
+var configFile = glob.sync('**/release.config.js', {nodir: true})[0]
 
 nconf.argv()
    .env()
