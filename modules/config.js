@@ -1,7 +1,10 @@
 var nconf = require('nconf');
+var glob      = require('glob');
+var configFile = glob.sync('**/*/release.config.js', {nodir: true})[0]
+
 nconf.argv()
    .env()
-   .file({file: 'config/release.json' });
+   .file({file: configFile });
 
 nconf.defaults({
     'base_dir':  '**/*'
