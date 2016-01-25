@@ -30,7 +30,7 @@ var uploadFn = function (item, cb) {
   var params = {
     ACL: 'public-read',
     ContentType: mime.lookup(item.path),
-    Key: item.version + '/' + item.path,
+    Key: 'releases/' + item.version + '/' + item.path,
     Body: fs.readFileSync(item.path)
   };
   s3.upload(params, function(err, data) {
